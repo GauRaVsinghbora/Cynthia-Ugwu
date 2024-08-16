@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "General Sans";
+}
+.mincircle{
+    transition: all 50ms ease-in-out;
+    z-index: 999999999;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+/* =======================================================
+    typography ===========================================
+     */
+/* =======================================================
+    layouts ==============================================
+     */
+.home{
+    position: relative;
+    color: white;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* header */
+.header{
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+.header a{
+    font-size: 1.4rem;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+.header h4{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+/* heading */
+.tag{
+    margin-top: 10rem;
+}
+.tag h1{
+    color: #A3A3A3;
+    font-size: 9rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.blocktext{
+    width: fit-content;
+}
+.tag .heading2{
+    margin-left: 10vw;
+}
+.tag .para{
+    text-align: right;
+    margin:.8rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* small heading */
+.small-heading{
+    margin-top: 5rem;
+}
+.small-heading h4{
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+/* home footer */
+.home-footer{
+    margin: auto auto 1rem ;
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+}
+.left-footer{
+    width: 63%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+.left-footer a{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+}
+/* scroll section */
+.scroll-box{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+}
+.scroll-box i{
+    padding: .5rem;
+    font-size: 1.1rem;
+    font-weight: 900;
+    border-radius:50%;
+    background-color: white;
+    color: black;
+}
+
+/* second larnding page */
+.second-page{
+    margin: 8rem auto;
+    color: white;
+}
+.second-page div{
+    position: relative;
+    border-top: 1px solid #A3A3A3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.second-page div img{
+    pointer-events: none;
+    z-index: 1000;
+    position: absolute;
+    height: 140%;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+}
+.second-page h1{
+    color: #A3A3A3;
+    padding: 2rem ;
+    text-transform: uppercase;
+    font-size: 7vw;
+}
+.second-page div:last-child{
+    border-bottom: 1px solid #A3A3A3;
+}
+
+/* about section */
+.about{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.about-img{
+    width: 250px;
+}
+.about-img img{
+    width: 100%;
+}
+.about-info{
+    margin: 0 4rem;
+    width: 450px;
+    color: white;
+}
+.about-info p{
+    font-size: 1.2rem;
+}
+.about-info h4{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #A3A3A3;
+}
+.about-info button{
+    margin-top: 2rem;
+    background-color: black;
+    color: white;
+    padding:.5rem 2rem;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+/* subscribe */
+.subscribe{
+    margin: 4rem auto;
+}
+.subscribe h4{
+    color: #A3A3A3;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+.subscribe a{
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* footer */
+.footer{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.6rem;
+}
+.footer div:first-child{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.footer div h4{
+    font-size: 1.1rem;
+    font-weight:700;
+}
+.footer h4 span{
+    color: #A3A3A3;
+}
+nav ul{
+    display: flex;
+    gap: 30px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+nav a{
+    font-size: .9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    transition:all 1s ease-in-out;
+}
+
+
+/* ==============================================================
+    animation
+     */
+.boundary{
+    /* width: fit-content; */
+    overflow: hidden;
+}
+.boundary h1{
+    transform: translatey(100%);
+}
+.boundary .hideElem{
+    transform: translatey(-150%);
+}
+.footer nav a:hover{
+    border-bottom: 1px solid white;
+}
+
+
+/* ===============================================================
+    media queries
+     */
+@media (max-width:1031px) {
+    .about-info{
+        width: 300px;
+        margin: 0 2rem 0 4rem;
+    }
+    .about-info p{
+        font-size: 1rem;
+        font-weight: 200;
+        /* letter-spacing: .1rem; */
+    }
+    .about-img{
+        width: 200px;
+    }
+}
+@media(max-width:961px){
+    .boundary h1{
+        font-size: 6rem;
+    }
+
+}
+@media (max-width:860px) {
+    .about{
+        flex-direction: column;
+    }
+    .about-img{
+        align-self: flex-start;
+    }
+    .about-info{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer nav{
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    .footer div{
+        width: 100%;
+    }
+    .footer div h4{
+        font-size: .8rem;
+        color: #A3A3A3;
+    }
+}
+@media(max-width:700px){
+    .boundary h1{
+        font-size: 4rem;
+    }
+    .home-footer{
+        padding-top: 5rem;
+        flex-direction: column;
+    }
+    .left-footer{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .scroll-box{
+        width: fit-content;
+    }
+}
+@media(max-width:500px){
+    .boundary h1{
+        font-size: 15vw;
+    }
+}
