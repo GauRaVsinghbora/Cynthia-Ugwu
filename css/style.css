@@ -155,7 +155,7 @@ html,body{
 }
 .second-page h1{
     color: #A3A3A3;
-    padding: 2rem ;
+    padding: 2rem 10px;
     text-transform: uppercase;
     font-size: 7vw;
 }
